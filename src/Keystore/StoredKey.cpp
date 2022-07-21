@@ -250,7 +250,7 @@ const PrivateKey StoredKey::privateKey(TWCoinType coin, const Data& password) {
     return privateKey(coin, TWDerivationDefault, password);
 }
 
-const PrivateKey StoredKey::privateKey(TWCoinType coin, TWDerivation derivation, const Data& password) {
+const PrivateKey StoredKey::privateKey(TWCoinType coin, [[maybe_unused]] TWDerivation derivation, const Data& password) {
     if (type == StoredKeyType::mnemonicPhrase) {
         const auto wallet = this->wallet(password);
         const auto account = this->account(coin, &wallet);
