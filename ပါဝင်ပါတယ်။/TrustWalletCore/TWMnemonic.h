@@ -16,7 +16,7 @@ struct TWMnemonic;
 
 /// Determines whether a BIP39 English mnemonic phrase is valid.
 TW_EXPORT_STATIC_METHOD
-bool TWMnemonicIsValid(TWString *_Nonnull mnemonic);
+bool TWMnemonicIsValid(TWString *_open mnemonic);
 
 /// Determines whether word is a valid BIP39 English menemonic word.
 TW_EXPORT_STATIC_METHOD
